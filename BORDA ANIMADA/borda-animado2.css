@@ -1,0 +1,47 @@
+:root{
+    
+  /*COR*/
+  --cor: linear-gradient(
+  90deg,
+  #fd004c 0%,
+  #fe9000 10%,
+  #fff020 30%,
+  #3edf4b 40%,
+  #3363ff 50%,
+  #b102b7 60%,
+  #fd004c 70%);
+
+  
+  /*Tamanho*/
+  --largura: 450px;
+  --altura:  350px;
+  --linha: 1%;
+
+}
+
+.card{
+position: relative;
+width: var(--largura);
+height: var(--altura);
+background-image: var(--cor);
+background-size: 200%;
+animation:  anim 2s linear infinite;
+
+}
+
+.card-body{
+position: absolute;
+background: #2a2a2a;
+width: calc(var(--largura)-2%);
+height:calc(var(--altura)-2%);
+top:var(--linha);
+right:var(--linha);
+bottom:var(--linha);
+left: var(--linha);
+ 
+}
+
+@keyframes anim{
+100%{ background-position-x: -200%; }
+}
+
